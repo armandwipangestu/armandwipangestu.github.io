@@ -5,10 +5,10 @@ import SwitchToggle from "../Utilities/switch.toggle";
 
 const NavigationLink = [
   { name: "Home", href: "#", current: true },
-  { name: "About", href: "#", current: false },
-  { name: "Projects", href: "#", current: false },
-  { name: "Skills", href: "#", current: false },
-  { name: "Contact", href: "#", current: false },
+  { name: "About", href: "#about", current: false },
+  { name: "Projects", href: "#projects", current: false },
+  { name: "Skills", href: "#skills", current: false },
+  { name: "Contact", href: "#contact", current: false },
 ];
 
 const classNames = (...classes) => {
@@ -37,7 +37,7 @@ const Navigation = () => {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+              <div className="flex flex-auto items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   {/* <img
                     className="block h-8 w-auto lg:hidden"
@@ -49,7 +49,7 @@ const Navigation = () => {
                     src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=500"
                     alt="Workflow"
                   /> */}
-                  <h3 className="text-gray-300">My Portofolio</h3>
+                  <h3 className="text-gray-300">Arman Dwi Pangestu</h3>
                 </div>
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-end">
