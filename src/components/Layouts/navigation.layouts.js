@@ -15,11 +15,28 @@ const classNames = (...classes) => {
   return classes.filter(Boolean).join(" ");
 };
 
+// NavigationLink.map((item) => console.log(item));
+
+const setActive = (data) => {
+  // NavigationLink.forEach((res) => {
+  //   if (res.current === true) {
+  //     res.current = false;
+  //   }
+  //   if (res.name === data) {
+  //     res.current = true;
+  //     console.log(res.current);
+  //   }
+  // });
+  console.log(data);
+};
+
+// setActive("About");
+
 const Navigation = () => {
   return (
     <Disclosure
       as="nav"
-      className="bg-gray-800"
+      className="bg-gray-800 sticky top-0"
       style={{ boxShadow: "0 5px 20px rgb(0 0 0 / 35%)" }}
     >
       {({ open }) => (
@@ -66,6 +83,7 @@ const Navigation = () => {
                           "px-3 py-2 rounded-md text-sm font-medium"
                         )}
                         aria-current={item.current ? "page" : undefined}
+                        // onClick={setActive(item.name)}
                       >
                         {item.name}
                       </a>
@@ -91,6 +109,7 @@ const Navigation = () => {
                     "block px-3 py-2 rounded-md text-base font-medium"
                   )}
                   aria-current={item.current ? "page" : undefined}
+                  // onClick={console.log(item.name)}
                 >
                   {item.name}
                 </Disclosure.Button>
