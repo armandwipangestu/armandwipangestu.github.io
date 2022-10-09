@@ -8,24 +8,21 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCodeFork, faCodeBranch } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { list } from "postcss";
+import { type } from "@testing-library/user-event/dist/type";
 
-const shows = [
-  "",
+const listRepositoryShow = [
   "armandwipangestu.github.io",
   "awesomeshot",
   "blog",
-  "",
   "data-structure",
-  "",
-  "",
-  "",
   "laravel",
+  "laracamp",
   "myTermux",
-  "",
   "reactjs",
-  "",
   "sorting-algorithm",
 ];
+let localJSON = {};
 
 const Card = () => {
   let [repository, setRepository] = useState([]);
@@ -47,94 +44,127 @@ const Card = () => {
     fetchRepository();
   }, []);
 
+  // for (const key in repository) {
+  //   // console.log(repository[key]);
+  //   for (const key2 in listRepositoryShow) {
+  //     if (repository[key].name === listRepositoryShow[key2]) {
+  //       localJSON += repository[key];
+  //     }
+  //   }
+  // }
+  // localJSON.forEach(lj => {
+  //   console.lg(lj.name)
+  // })
+
+  // repository.forEach((data) => {
+  //   listRepositoryShow.forEach((list) => {
+  //     if (data.name === list) {
+  //       // localJSON = JSON.stringify(data);
+  //       console.log(data.name);
+  //     }
+  //   });
+  // });
+  // localJSON.map((data) => {
+  //   console.log(data);
+  // });
+  // console.log(JSON.parse(localJSON));
+
   return (
     <>
       {repository.map((data, i) => {
-        if (data.name === shows[i]) {
-          return (
-            <React.Fragment key={i}>
-              <div className="flex items-stretch justify-center p-3">
-                <div className="flex-1 rounded-lg shadow-2xl max-w-sm bg-gray-800 text-white">
-                  <div className="h-full p-6">
-                    <div className="inline-flex justify-between mb-4">
-                      <img
-                        className="rounded-full w-8 h-8 mr-2"
-                        src={data.owner.avatar_url}
-                        alt="Avatar"
-                      />
-                      <h3 className="text-xl font-medium mb-2">{data.name}</h3>
-                    </div>
-                    <br />
-                    {data.topics.map((topic, i) => {
-                      return (
-                        <React.Fragment key={i}>
-                          <div className="text-xs inline-flex items-center font-bold leading-sm px-4 py-1.5 bg-gray-900 rounded-full mr-2 mb-3">
-                            {/* <TagIcon className="h-6 w-3 mr-1.5" /> */}#
-                            {topic}
-                          </div>
-                        </React.Fragment>
-                      );
-                    })}
-                    <p className=" text-base mb-4">{data.description}</p>
-                    <div className="inline-flex justify-between">
-                      <a
-                        href={data.html_url + "/stargazers"}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex"
-                      >
-                        <StarIcon className="h-6 w-6 text-yellow-500 mr-1.5" />
-                        <p className="mb-6 mr-4">{data.stargazers_count}</p>
-                      </a>
-                      <a
-                        href={data.html_url + "/issues"}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex"
-                      >
-                        <ExclamationCircleIcon className="h-6 w-6 text-red-600 mr-1.5" />
-                        <p className="mb-6 mr-4">{data.open_issues_count}</p>
-                      </a>
-
-                      <a
-                        href={data.html_url + "/network/members"}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex"
-                      >
-                        <FontAwesomeIcon
-                          icon={faCodeFork}
-                          className="mr-1.5 mt-1"
+        for (const key2 in listRepositoryShow) {
+          if (data.name === listRepositoryShow[key2]) {
+            return (
+              <React.Fragment key={i}>
+                <div className="flex items-stretch justify-center p-3">
+                  <div className="flex-1 rounded-lg shadow-2xl max-w-sm bg-gray-800 text-white">
+                    <div className="h-full p-6">
+                      <div className="inline-flex justify-between mb-4">
+                        <img
+                          className="rounded-full w-8 h-8 mr-2"
+                          src={data.owner.avatar_url}
+                          alt="Avatar"
                         />
-                        <p className="mb-6 mr-4">{data.forks_count}</p>
-                      </a>
-                    </div>
-                    <br />
-                    <a href={data.html_url} target="_blank" rel="noreferrer">
-                      <button
-                        type="button"
-                        className="inline-block px-6 py-2.5 bg-gray-900 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-slate-700 hover:shadow-lg focus:bg-slate-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-800 active:shadow-lg transition duration-150 ease-in-out"
-                      >
-                        <FontAwesomeIcon icon={faGithub} className="mr-1.5" />{" "}
-                        See on GitHub
-                      </button>
-                    </a>
-                    {}
-                    {data.homepage && (
-                      <a href={data.homepage} target="_blank" rel="noreferrer">
+                        <h3 className="text-xl font-medium mb-2">
+                          {data.name}
+                        </h3>
+                      </div>
+                      <br />
+                      {data.topics.map((topic, i) => {
+                        return (
+                          <React.Fragment key={i}>
+                            <div className="text-xs inline-flex items-center font-bold leading-sm px-4 py-1.5 bg-gray-900 rounded-full mr-2 mb-3">
+                              {/* <TagIcon className="h-6 w-3 mr-1.5" /> */}#
+                              {topic}
+                            </div>
+                          </React.Fragment>
+                        );
+                      })}
+                      <p className=" text-base mb-4">{data.description}</p>
+                      <div className="inline-flex justify-between">
+                        <a
+                          href={data.html_url + "/stargazers"}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex"
+                        >
+                          <StarIcon className="h-6 w-6 text-yellow-500 mr-1.5" />
+                          <p className="mb-6 mr-4">{data.stargazers_count}</p>
+                        </a>
+                        <a
+                          href={data.html_url + "/issues"}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex"
+                        >
+                          <ExclamationCircleIcon className="h-6 w-6 text-red-600 mr-1.5" />
+                          <p className="mb-6 mr-4">{data.open_issues_count}</p>
+                        </a>
+
+                        <a
+                          href={data.html_url + "/network/members"}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex"
+                        >
+                          <FontAwesomeIcon
+                            icon={faCodeFork}
+                            className="mr-1.5 mt-1"
+                          />
+                          <p className="mb-6 mr-4">{data.forks_count}</p>
+                        </a>
+                      </div>
+                      <br />
+                      <a href={data.html_url} target="_blank" rel="noreferrer">
                         <button
                           type="button"
-                          className="ml-5 inline-block px-6 py-2.5 bg-gray-900 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-slate-700 hover:shadow-lg focus:bg-slate-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-800 active:shadow-lg transition duration-150 ease-in-out"
+                          className="inline-block px-6 py-2.5 bg-gray-900 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-slate-700 hover:shadow-lg focus:bg-slate-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-800 active:shadow-lg transition duration-150 ease-in-out"
                         >
-                          Visit
+                          <FontAwesomeIcon icon={faGithub} className="mr-1.5" />{" "}
+                          See on GitHub
                         </button>
                       </a>
-                    )}
+                      {}
+                      {data.homepage && (
+                        <a
+                          href={data.homepage}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <button
+                            type="button"
+                            className="ml-5 inline-block px-6 py-2.5 bg-gray-900 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-slate-700 hover:shadow-lg focus:bg-slate-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-800 active:shadow-lg transition duration-150 ease-in-out"
+                          >
+                            Visit
+                          </button>
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </React.Fragment>
-          );
+              </React.Fragment>
+            );
+          }
         }
       })}
     </>
