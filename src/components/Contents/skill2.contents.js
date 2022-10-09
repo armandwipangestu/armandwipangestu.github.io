@@ -2,8 +2,10 @@ const Skills = () => {
   return (
     <section id="skills">
       <div className="container">
-        <div className="experience-container">
-          <h3>Skills</h3>
+        <div className="p-6">
+          <div className="flex text-3xl justify-center">
+            <h3 className="font-bold">Skills</h3>
+          </div>
         </div>
         <div className="experience-body">
           <div className="experience-body-container">

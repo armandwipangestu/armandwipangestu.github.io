@@ -4,8 +4,10 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import SwitchToggle from "../Utilities/switch.toggle";
 
 const NavigationLink = [
-  { name: "Home", href: "#", current: true },
-  { name: "About", href: "#about", current: false },
+  // { name: "Home", href: "#", current: true },
+  // { name: "About", href: "#about", current: false },
+  { name: "Profile", href: "#profile", current: false },
+  { name: "Experience", href: "#experience", current: false },
   { name: "Projects", href: "#projects", current: false },
   { name: "Skills", href: "#skills", current: false },
   { name: "Contact", href: "#contact", current: false },
@@ -66,7 +68,7 @@ const Navigation = () => {
                     src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=500"
                     alt="Workflow"
                   /> */}
-                  <h3 className="text-gray-300">Arman Dwi Pangestu</h3>
+                  <h3 className="text-gray-300">Portofolio</h3>
                 </div>
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-end">

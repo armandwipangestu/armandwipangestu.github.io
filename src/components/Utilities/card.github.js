@@ -1,15 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
-import {
-  StarIcon,
-  ExclamationCircleIcon,
-  TagIcon,
-} from "@heroicons/react/24/outline";
+import { StarIcon, ExclamationCircleIcon } from "@heroicons/react/24/outline";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCodeFork, faCodeBranch } from "@fortawesome/free-solid-svg-icons";
+import { faCodeFork } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { list } from "postcss";
-import { type } from "@testing-library/user-event/dist/type";
 
 const listRepositoryShow = [
   "armandwipangestu.github.io",
@@ -22,7 +16,6 @@ const listRepositoryShow = [
   "reactjs",
   "sorting-algorithm",
 ];
-let localJSON = {};
 
 const Card = () => {
   let [repository, setRepository] = useState([]);
@@ -43,31 +36,6 @@ const Card = () => {
   useEffect(() => {
     fetchRepository();
   }, []);
-
-  // for (const key in repository) {
-  //   // console.log(repository[key]);
-  //   for (const key2 in listRepositoryShow) {
-  //     if (repository[key].name === listRepositoryShow[key2]) {
-  //       localJSON += repository[key];
-  //     }
-  //   }
-  // }
-  // localJSON.forEach(lj => {
-  //   console.lg(lj.name)
-  // })
-
-  // repository.forEach((data) => {
-  //   listRepositoryShow.forEach((list) => {
-  //     if (data.name === list) {
-  //       // localJSON = JSON.stringify(data);
-  //       console.log(data.name);
-  //     }
-  //   });
-  // });
-  // localJSON.map((data) => {
-  //   console.log(data);
-  // });
-  // console.log(JSON.parse(localJSON));
 
   return (
     <>
