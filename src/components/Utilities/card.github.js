@@ -49,13 +49,11 @@ const Card = () => {
                     <div className="h-full p-6">
                       <div className="inline-flex justify-between mb-4">
                         <img
-                          className="rounded-full w-8 h-8 mr-2"
+                          className="rounded-full w-8 h-8 mr-3"
                           src={data.owner.avatar_url}
                           alt="Avatar"
                         />
-                        <h3 className="text-xl font-medium mb-2">
-                          {data.name}
-                        </h3>
+                        <h3 className="text-xl font-bold mb-2">{data.name}</h3>
                       </div>
                       <br />
                       {data.topics.map((topic, i) => {
@@ -106,7 +104,7 @@ const Card = () => {
                       <a href={data.html_url} target="_blank" rel="noreferrer">
                         <button
                           type="button"
-                          className="inline-block px-6 py-2.5 bg-gray-900 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-slate-700 hover:shadow-lg focus:bg-slate-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-800 active:shadow-lg transition duration-150 ease-in-out"
+                          className="inline-block px-6 py-2.5 bg-gray-900 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-slate-700 hover:shadow-lg focus:bg-slate-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-800 active:shadow-lg transition duration-150 ease-in-out"
                         >
                           <FontAwesomeIcon icon={faGithub} className="mr-1.5" />{" "}
                           See on GitHub
@@ -121,7 +119,7 @@ const Card = () => {
                         >
                           <button
                             type="button"
-                            className="ml-5 inline-block px-6 py-2.5 bg-gray-900 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-slate-700 hover:shadow-lg focus:bg-slate-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-800 active:shadow-lg transition duration-150 ease-in-out"
+                            className="ml-2 inline-block px-6 py-2.5 bg-gray-900 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-slate-700 hover:shadow-lg focus:bg-slate-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-slate-800 active:shadow-lg transition duration-150 ease-in-out"
                           >
                             Visit
                           </button>

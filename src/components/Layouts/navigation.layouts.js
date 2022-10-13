@@ -1,7 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import SwitchToggle from "../Utilities/switch.toggle";
+// import SwitchToggle from "../Utilities/switch.toggle";
 
 const NavigationLink = [
   // { name: "Home", href: "#", current: true },
@@ -19,18 +19,18 @@ const classNames = (...classes) => {
 
 // NavigationLink.map((item) => console.log(item));
 
-const setActive = (data) => {
-  // NavigationLink.forEach((res) => {
-  //   if (res.current === true) {
-  //     res.current = false;
-  //   }
-  //   if (res.name === data) {
-  //     res.current = true;
-  //     console.log(res.current);
-  //   }
-  // });
-  console.log(data);
-};
+// const setActive = (data) => {
+//   // NavigationLink.forEach((res) => {
+//   //   if (res.current === true) {
+//   //     res.current = false;
+//   //   }
+//   //   if (res.name === data) {
+//   //     res.current = true;
+//   //     console.log(res.current);
+//   //   }
+//   // });
+//   console.log(data);
+// };
 
 // setActive("About");
 
@@ -47,7 +47,7 @@ const Navigation = () => {
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center rounded-full p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -82,7 +82,7 @@ const Navigation = () => {
                           item.current
                             ? "bg-gray-900 text-white"
                             : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                          "px-3 py-2 rounded-md text-sm font-medium"
+                          "px-3 py-2 rounded-full text-sm font-medium"
                         )}
                         aria-current={item.current ? "page" : undefined}
                         // onClick={setActive(item.name)}
@@ -108,7 +108,7 @@ const Navigation = () => {
                     item.current
                       ? "bg-gray-900 text-white"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                    "block px-3 py-2 rounded-md text-base font-medium"
+                    "block px-3 py-2 rounded-full text-base font-medium"
                   )}
                   aria-current={item.current ? "page" : undefined}
                   // onClick={console.log(item.name)}

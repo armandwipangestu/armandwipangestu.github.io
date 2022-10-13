@@ -11,7 +11,8 @@ const Experience = () => {
           PT. CITRA JELAJAH INFORMATIKA (2021 - Now)
         </h4>
         <p className="text-gray-600 mt-5 md:px-56 px-10 text-xs md:text-base text-bold">
-          • Menganalisa, merancang, instalasi kebutuhan jaringan di gedung, mall
+          • Menganalisa, merancang, instalasi kebutuhan jaringan di gedung,
+          mall, sekolah, hotel, dsb
           <br />
           • Network Operation Center (NOC)
           <br />
