@@ -8,6 +8,7 @@ import {
   faJs,
   faLaravel,
   faLinux,
+  faMarkdown,
   faNodeJs,
   faPhp,
   faPython,
@@ -41,6 +42,10 @@ const Skills = () => {
                         className="mr-1.5 text-red-500"
                       />
                       HTML
+                    </li>
+                    <li className="mb-2">
+                      <FontAwesomeIcon icon={faMarkdown} className="mr-1.5" />
+                      Markdown
                     </li>
                     <li className="mb-2">
                       <FontAwesomeIcon
@@ -185,7 +190,10 @@ const Skills = () => {
                   <div className="inline-flex justify-between mb-4">
                     <h3 className="text-xl font-bold mb-2">Networking</h3>
                   </div>
-                  <ul className="md:text-sm">
+                  <ul
+                    className="md:text-sm px-4"
+                    style={{ listStyle: "outside" }}
+                  >
                     <li className="mb-2">LAN / WAN</li>
                     <li className="mb-2">VLAN</li>
                     <li className="mb-2">TCP / IP Networking</li>
