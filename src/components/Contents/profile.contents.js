@@ -8,9 +8,9 @@ const Profile = () => {
           </div>
         </div>
         <p className="text-gray-600 mt-5 md:px-56 px-10 text-xs md:text-base">
-          Saya seorang Web Developer dan Network Engineer yang mampu membangun
+          Saya seorang Junior Web Developer dan Network Engineer yang mampu membangun
           aplikasi berbasis website menggunakan stack teknologi modern serta
-          mampu merancang, menganalisa sebuah topologi jaringan dan
+          mampu merancang, menganalisa sebuah topologi jaringan dan juga
           mengoperasikan perangkat jaringan.
         </p>
       </div>

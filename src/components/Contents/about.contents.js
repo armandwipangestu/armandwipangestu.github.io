@@ -21,7 +21,7 @@ const About = () => {
             </div>
           </div>
           <p className="text-gray-600 mt-5 md:px-56 px-10 text-xs md:text-base">
-            Linux Enthusiat | Web Developer | Network Engineer
+            Linux Enthusiast | Junior Web Developer | Network Engineer
           </p>
         </div>
       </section>
