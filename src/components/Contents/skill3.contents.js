@@ -39,28 +39,28 @@ const Skills = () => {
                       <FontAwesomeIcon
                         icon={faHtml5}
                         className="mr-1.5 text-red-500"
-                      />{" "}
+                      />
                       HTML
                     </li>
                     <li className="mb-2">
                       <FontAwesomeIcon
                         icon={faCss3Alt}
                         className="mr-1.5 text-blue-500"
-                      />{" "}
+                      />
                       CSS
                     </li>
                     <li className="mb-2">
                       <FontAwesomeIcon
                         icon={faJs}
                         className="mr-1.5 text-yellow-500"
-                      />{" "}
+                      />
                       JavaScript
                     </li>
                     <li className="mb-2">
                       <FontAwesomeIcon
                         icon={faPhp}
                         className="mr-1.5 text-purple-300"
-                      />{" "}
+                      />
                       PHP
                     </li>
                     <li className="mb-2">

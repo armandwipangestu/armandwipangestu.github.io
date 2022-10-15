@@ -68,7 +68,9 @@ const Navigation = () => {
                     src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=500"
                     alt="Workflow"
                   /> */}
-                  <h3 className="text-gray-300">Portofolio</h3>
+                  <a href="#about">
+                    <h3 className="text-gray-300">Portofolio</h3>
+                  </a>
                 </div>
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-end">

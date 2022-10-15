@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+
 const Contact = () => {
   return (
     <section id="contact">
@@ -16,7 +19,7 @@ const Contact = () => {
                 ™. All Rights Reserved.
               </span>
             </div>
-            <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+            <div className="flex mt-4 space-x-3 sm:justify-center sm:mt-0">
               <a
                 href="https://github.com/armandwipangestu"
                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
@@ -36,6 +39,15 @@ const Contact = () => {
                   />
                 </svg>
                 <span className="sr-only">GitHub account</span>
+              </a>
+              <a
+                href="mailto:armandwi.pangestu7@gmail.com"
+                className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FontAwesomeIcon icon={faEnvelope} />
+                <span className="sr-only">Email</span>
               </a>
             </div>
           </div>
