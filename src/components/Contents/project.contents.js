@@ -6,7 +6,7 @@ const Projects = () => {
       <section id="projects">
         <div className="pt-6">
           <div className="flex text-3xl justify-center">
-            <h3 className="font-bold">Projects</h3>
+            <h3 className="font-bold">Projek</h3>
           </div>
         </div>
         <div className="md:px-20">

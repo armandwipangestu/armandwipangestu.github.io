@@ -6,11 +6,11 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 const NavigationLink = [
   // { name: "Home", href: "#", current: true },
   // { name: "About", href: "#about", current: false },
-  { name: "Profile", href: "#profile", current: false },
-  { name: "Experience", href: "#experience", current: false },
-  { name: "Projects", href: "#projects", current: false },
-  { name: "Skills", href: "#skills", current: false },
-  { name: "Contact", href: "#contact", current: false },
+  { name: "Profil", href: "#profile", current: false },
+  { name: "Pengalaman", href: "#experience", current: false },
+  { name: "Projek", href: "#projects", current: false },
+  { name: "Keahlian", href: "#skills", current: false },
+  { name: "Kontak", href: "#contact", current: false },
 ];
 
 const classNames = (...classes) => {

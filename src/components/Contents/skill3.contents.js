@@ -23,7 +23,7 @@ const Skills = () => {
     <section id="skills" className="pb-10">
       <div className="pt-6">
         <div className="flex text-3xl justify-center">
-          <h3 className="font-bold">Skills</h3>
+          <h3 className="font-bold">Keahlian</h3>
         </div>
       </div>
       <div className="md:px-20">
