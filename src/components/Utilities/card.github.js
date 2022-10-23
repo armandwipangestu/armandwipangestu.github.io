@@ -6,6 +6,7 @@ import { faCodeFork } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const listRepositoryShow = [
+  "perpustakaan_galuh",
   "armandwipangestu.github.io",
   "awesomeshot",
   "blog",
@@ -40,6 +41,7 @@ const Card = () => {
   return (
     <>
       {repository.map((data, i) => {
+        console.log(data.name)
         for (const key2 in listRepositoryShow) {
           if (data.name === listRepositoryShow[key2]) {
             return (
